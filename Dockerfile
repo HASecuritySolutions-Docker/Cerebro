@@ -10,7 +10,7 @@ ENV ELASTICSEARCH_PORT 9200
 # Transport method - either http or https
 ENV PROTOCOL http
 
-RUN curl -L https://github.com/lmenezes/cerebro/archive/v0.8.3.zip -o /opt/cerebro-0.8.3.zip
+RUN curl -L https://github.com/lmenezes/cerebro/releases/download/v0.8.3/cerebro-0.8.3.zip -o /opt/cerebro-0.8.3.zip
 RUN cd /opt \
     && unzip cerebro-0.8.3.zip \
     && rm cerebro-0.8.3.zip \
