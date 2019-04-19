@@ -16,15 +16,8 @@ ENV ELASTICSEARCH_USER ""
 # Password for ES authentication
 ENV ELASTICSEARCH_PASSWORD ""
 
-host = "http://some-authenticated-host:9200"
-  #  name = "Secured Cluster"
-  #  auth = {
-  #    username = "username"
-  #    password = "secret-password"
-  #  }
-
-RUN curl -L https://github.com/lmenezes/cerebro/releases/download/v0.8.3/cerebro-0.8.3.zip -o /opt/cerebro-0.8.3.zip
-RUN cd /opt \
+RUN curl -L https://github.com/lmenezes/cerebro/releases/download/v0.8.3/cerebro-0.8.3.zip -o /opt/cerebro-0.8.3.zip \
+    cd /opt \
     && unzip cerebro-0.8.3.zip \
     && rm cerebro-0.8.3.zip \
     && mv -f /opt/cerebro-0.8.3 /opt/cerebro \
