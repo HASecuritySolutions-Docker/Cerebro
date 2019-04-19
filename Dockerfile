@@ -9,6 +9,19 @@ ENV ELASTICSEARCH_HOST elasticsearch
 ENV ELASTICSEARCH_PORT 9200
 # Transport method - either http or https
 ENV PROTOCOL http
+# Nice name for ES node
+ENV ELASTICSEARCH_NAME elasticsearch
+# User for ES authentication
+ENV ELASTICSEARCH_USER
+# Password for ES authentication
+ENV ELASTICSEARCH_PASSWORD
+
+host = "http://some-authenticated-host:9200"
+  #  name = "Secured Cluster"
+  #  auth = {
+  #    username = "username"
+  #    password = "secret-password"
+  #  }
 
 RUN curl -L https://github.com/lmenezes/cerebro/releases/download/v0.8.3/cerebro-0.8.3.zip -o /opt/cerebro-0.8.3.zip
 RUN cd /opt \
@@ -27,4 +40,4 @@ RUN chmod +x /opt/entrypoint.sh \
 USER cerebro
 STOPSIGNAL SIGTERM
 
-CMD /bin/bash /opt/entrypoint.sh
+CMD /opt/cerebro/bin/cerebro
