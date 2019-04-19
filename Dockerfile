@@ -12,9 +12,9 @@ ENV PROTOCOL http
 # Nice name for ES node
 ENV ELASTICSEARCH_NAME elasticsearch
 # User for ES authentication
-ENV ELASTICSEARCH_USER
+ENV ELASTICSEARCH_USER ""
 # Password for ES authentication
-ENV ELASTICSEARCH_PASSWORD
+ENV ELASTICSEARCH_PASSWORD ""
 
 host = "http://some-authenticated-host:9200"
   #  name = "Secured Cluster"
