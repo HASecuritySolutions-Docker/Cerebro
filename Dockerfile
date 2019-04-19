@@ -17,7 +17,7 @@ ENV ELASTICSEARCH_USER ""
 ENV ELASTICSEARCH_PASSWORD ""
 
 RUN curl -L https://github.com/lmenezes/cerebro/releases/download/v0.8.3/cerebro-0.8.3.zip -o /opt/cerebro-0.8.3.zip \
-    cd /opt \
+    && cd /opt \
     && unzip cerebro-0.8.3.zip \
     && rm cerebro-0.8.3.zip \
     && mv -f /opt/cerebro-0.8.3 /opt/cerebro \
