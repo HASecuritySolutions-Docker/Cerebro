@@ -33,4 +33,4 @@ RUN chmod +x /opt/entrypoint.sh \
 USER cerebro
 STOPSIGNAL SIGTERM
 
-CMD /opt/cerebro/bin/cerebro
+CMD /bin/bash /opt/entrypoint.sh
