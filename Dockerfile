@@ -2,7 +2,7 @@ FROM openjdk:8-jre
 MAINTAINER Justin Henderson justin@hasecuritysolutions.com
 
 # Base Path setting - Necessary if you are using a reverse proxy such as Nginx
-ENV BASEPATH /
+ENV VARBASEPATH /
 # Alias, DNS or IP of Elasticsearch host to be queried by Elastalert. Set in default Elasticsearch configuration file.
 ENV ELASTICSEARCH_HOST elasticsearch
 # Port Elasticsearch runs on
