@@ -1,9 +1,6 @@
 FROM openjdk:8-jre
 MAINTAINER Justin Henderson justin@hasecuritysolutions.com
 
-
-apt update
-apt install -y curl unzip
 RUN apt update \
     && apt install -y curl unzip \
     && apt clean \
