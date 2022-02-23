@@ -1,4 +1,4 @@
-FROM openjdk:8-jre
+FROM openjdk:11-jre-slim-buster
 MAINTAINER Justin Henderson justin@hasecuritysolutions.com
 
 RUN apt update \
