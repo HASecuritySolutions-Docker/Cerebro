@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim-buster
+FROM openjdk:19-jdk
 MAINTAINER Justin Henderson justin@hasecuritysolutions.com
 
 RUN apt update \
